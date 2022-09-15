@@ -10,6 +10,7 @@ export default function Main() {
   const [middle, setMiddle] = useState('blue');
   const [bottom, setBottom] = useState('leg');
   const [headCount, setHeadCount] = useState(0);
+  const [middleCount, setMiddleCount] = useState(0);
 
   return (
     <main>
@@ -21,9 +22,11 @@ export default function Main() {
           setMiddle={setMiddle}
           bottom={bottom}
           setBottom={setBottom}
-          setHeadCount={setHeadCount}/>
+          setHeadCount={setHeadCount}
+          setMiddleCount={setMiddleCount}/>
         <Stats
-          headCount={headCount}/>
+          headCount={headCount}
+          middleCount={middleCount}/>
       </div>
       <div id="right">
         <Character
