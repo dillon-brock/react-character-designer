@@ -1,4 +1,4 @@
-export default function Controls({ head, setHead, middle, setMiddle }) {
+export default function Controls({ head, setHead, middle, setMiddle, bottom, setBottom }) {
   return (
     <div className="controls">
       <label>
@@ -21,6 +21,17 @@ export default function Controls({ head, setHead, middle, setMiddle }) {
           <option value="dress">dress</option>
           <option value="pink">pink</option>
           <option value="red">red</option>
+        </select>
+      </label>
+      <label>
+      BOTTOM
+        <select value={bottom} onChange={(e) => {
+          setBottom(e.target.value);
+        }}>
+          <option value="leg">leg</option>
+          <option value="blue">blue</option>
+          <option value="dog">dog</option>
+          <option value="white">white</option>
         </select>
       </label>
     </div>
