@@ -6,7 +6,8 @@ export default function Controls({
   bottom,
   setBottom,
   setHeadCount,
-  setMiddleCount
+  setMiddleCount,
+  setBottomCount
 }) {
 
   const handleChangeHead = (e) => {
@@ -17,6 +18,11 @@ export default function Controls({
   const handleChangeMiddle = (e) => {
     setMiddle(e.target.value);
     setMiddleCount((prevCount) => prevCount + 1);
+  };
+
+  const handleChangeBottom = (e) => {
+    setBottom(e.target.value);
+    setBottomCount((prevCount => prevCount + 1));
   };
 
   return (
@@ -41,9 +47,7 @@ export default function Controls({
       </label>
       <label>
       BOTTOM
-        <select value={bottom} onChange={(e) => {
-          setBottom(e.target.value);
-        }}>
+        <select value={bottom} onChange={handleChangeBottom}>
           <option value="leg">leg</option>
           <option value="blue">blue</option>
           <option value="dog">dog</option>
