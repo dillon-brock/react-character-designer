@@ -1,11 +1,23 @@
-export default function Controls({ head, setHead, middle, setMiddle, bottom, setBottom }) {
+export default function Controls({
+  head,
+  setHead,
+  middle,
+  setMiddle,
+  bottom,
+  setBottom,
+  setHeadCount
+}) {
+
+  const handleChangeHead = (e) => {
+    setHead(e.target.value);
+    setHeadCount((prevCount) => prevCount + 1);
+  };
+
   return (
     <div className="controls">
       <label>
         HEAD
-        <select value={head} onChange={(e) => {
-          setHead(e.target.value);
-        }}>
+        <select value={head} onChange={handleChangeHead}>
           <option value="bird">bird</option>
           <option value="dog">dog</option>
           <option value="duck">duck</option>
