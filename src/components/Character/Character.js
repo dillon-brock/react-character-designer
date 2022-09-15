@@ -1,5 +1,8 @@
-export default function Character({ head }) {
+export default function Character({ head, middle }) {
   return (
-    <img src={`./character/${head}-head.png`}></img>
+    <div className="character">
+      <img src={`./character/${head}-head.png`}></img>
+      <img src={`./character/${middle}-middle.png`}></img>
+    </div>
   );
 }
