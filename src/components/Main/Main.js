@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Character from '../Character/Character';
 import Controls from '../Controls/Controls';
 import Stats from '../Stats/Stats';
+import CatchphraseForm from '../CatchphraseForm/CatchphraseForm';
 
 export default function Main() {
   const [head, setHead] = useState('bird');
@@ -12,6 +13,7 @@ export default function Main() {
   const [headCount, setHeadCount] = useState(0);
   const [middleCount, setMiddleCount] = useState(0);
   const [bottomCount, setBottomCount] = useState(0);
+  const [catchphrases, setCatchphrases] = useState([]);
 
   return (
     <main>
@@ -26,10 +28,12 @@ export default function Main() {
           setHeadCount={setHeadCount}
           setMiddleCount={setMiddleCount}
           setBottomCount={setBottomCount}/>
+        <CatchphraseForm catchphrases={catchphrases} setCatchphrases={setCatchphrases}/>
         <Stats
           headCount={headCount}
           middleCount={middleCount}
-          bottomCount={bottomCount}/>
+          bottomCount={bottomCount}
+          catchphrases={catchphrases}/>
       </div>
       <div id="right">
         <Character
