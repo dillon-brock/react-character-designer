@@ -1,3 +1,5 @@
+import './CatchphraseForm.css';
+
 import { useState } from 'react';
 
 export default function CatchphraseForm({ catchphrases, setCatchphrases }) {
@@ -12,7 +14,7 @@ export default function CatchphraseForm({ catchphrases, setCatchphrases }) {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Add A Catchphrase
+        NEW CATCHPHRASE
         <input type="textarea" value={currentCatchphrase} onChange={(e) => {
           setCurrentCatchphrase(e.target.value);
         }}></input>

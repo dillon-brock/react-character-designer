@@ -17,29 +17,33 @@ export default function Main() {
 
   return (
     <main>
-      <div id="left">
-        <Controls
-          head={head}
-          setHead={setHead}
-          middle={middle}
-          setMiddle={setMiddle}
-          bottom={bottom}
-          setBottom={setBottom}
-          setHeadCount={setHeadCount}
-          setMiddleCount={setMiddleCount}
-          setBottomCount={setBottomCount}/>
-        <CatchphraseForm catchphrases={catchphrases} setCatchphrases={setCatchphrases}/>
-        <Stats
-          headCount={headCount}
-          middleCount={middleCount}
-          bottomCount={bottomCount}
-          catchphrases={catchphrases}/>
-      </div>
-      <div id="right">
-        <Character
-          head={head} 
-          middle={middle}
-          bottom={bottom}/>
+      <h1>Character Designer</h1>
+      <div id="container">
+        <div id="left">
+          <Controls
+            head={head}
+            setHead={setHead}
+            middle={middle}
+            setMiddle={setMiddle}
+            bottom={bottom}
+            setBottom={setBottom}
+            setHeadCount={setHeadCount}
+            setMiddleCount={setMiddleCount}
+            setBottomCount={setBottomCount}/>
+          <CatchphraseForm catchphrases={catchphrases} setCatchphrases={setCatchphrases}/>
+          <Stats
+            headCount={headCount}
+            middleCount={middleCount}
+            bottomCount={bottomCount}
+            catchphrases={catchphrases}/>
+        </div>
+        <div id="right">
+          <Character
+            head={head} 
+            middle={middle}
+            bottom={bottom}/>
+        </div>
+
       </div>
     </main>
   );

@@ -1,3 +1,15 @@
 main {
-  display: flex;
+  max-width: 50vw;
+  min-width: 800px;
+  margin: 0 auto;
+  height: 100vh;
+  background: white;
+  padding: 20px 35px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  margin: 50px auto 0 auto;
 }
