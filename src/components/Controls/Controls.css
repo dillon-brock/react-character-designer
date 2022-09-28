@@ -1,0 +1,19 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  display: contents;
+  font-weight: 700;
+  color: rgb(46, 88, 50);
+}
+
+select {
+  width: 200px;
+  margin: 5px auto 20px auto;
+  padding: 4px;
+  border: 2px solid gray;
+  border-radius: 5px;
+}
